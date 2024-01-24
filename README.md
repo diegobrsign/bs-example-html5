@@ -207,6 +207,23 @@ npm run put:dev
 
 [Back to deployment options](#deploying-code-to-the-player)
 
+### Building on M1 
+You might see an error like `npm ERR! Error: Cannot find module 'node-bin-darwin-arm64/package.json'`
+
+Run the following commands
+```
+> node -v
+v14.17.6
+> node -p process.arch
+arm64
+> arch -x86_64 zsh
+> nvm remove 14.17.6 && nvm install 14.17.6
+```
+
+You might need to do this each time you restart your terminal.
+
+https://stackoverflow.com/questions/68896696/having-trouble-installing-npm-on-mac-m1
+
 #### Local DWS front end
 
 Access the local DWS by typing the IP address of your player into a web browser. From there, you can view, upload and delete files on the player from the 'SD' tab. 
